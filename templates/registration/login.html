@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LOGIN_PAGE</title>
+</head>
+<body>
+<h2>Login</h2>
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Login</button>
+</form>
+<br>
+<p>If not having user account, You can register ---- <a href="{% url 'signup' %}">SignUP</a></p>
+</body>
+</html>
